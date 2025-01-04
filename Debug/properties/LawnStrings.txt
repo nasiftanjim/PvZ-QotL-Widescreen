@@ -2407,7 +2407,7 @@ Survival: Day (Endless)
 Survival: Night (Endless)
 
 [SURVIVAL_POOL_ENDLESS]
-Survival: Endless
+Survival: Pool (Endless)
 
 [SURVIVAL_FOG_ENDLESS]
 Survival: Fog (Endless)

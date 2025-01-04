@@ -180,7 +180,7 @@
 <Image id="PLANTSPEECHBUBBLE" path="plantspeechbubble" />
 <Image id="WATERDROP" path="waterdrop" />
 <Image id="TREEFOOD" path="TreeFood" />
-<Image id="PACKET_PLANTS" path="packet_plants" cols="13" />
+<Image id="PACKET_PLANTS" path="packet_plants" cols="76" />
 <Image id="ZEN_NEED_ICONS" path="zen_need_icons" cols="3" />
 <Image id="SQUIRREL" path="squirrel" />
 
@@ -696,8 +696,8 @@
 <Image id="CHALLENGE_WINDOW" path="Challenge_Window" />
 <Image id="CHALLENGE_WINDOW_HIGHLIGHT" path="Challenge_Window_Highlight" />
 <Image id="CHALLENGE_BLANK" path="Challenge_Blank" />
-<Image id="CHALLENGE_THUMBNAILS" path="Challenge_Thumbnails" cols="22" />
-<Image id="SURVIVAL_THUMBNAILS" path="Survival_Thumbnails" cols="11" />
+<Image id="CHALLENGE_THUMBNAILS" path="Challenge_Thumbnails" cols="37" />
+<Image id="SURVIVAL_THUMBNAILS" path="Survival_Thumbnails" cols="15" />
 <Image id="LOCK" path="lock" />
 <Image id="LOCK_OPEN" path="lock_open" />
 </Resources>  

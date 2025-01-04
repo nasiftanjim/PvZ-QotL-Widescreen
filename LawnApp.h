@@ -348,6 +348,7 @@ public:
 	void							GetAchievement(AchievementType theAchievementType);
 	void							UpdateDiscordState(SexyString def = "");
 	bool							Is3dAccel();
+	void							SetCursorMode(CursorMode theCursorMode);
 };
 
 SexyString							LawnGetCurrentLevelName();

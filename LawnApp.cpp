@@ -123,11 +123,13 @@ LawnApp::LawnApp()
 	mTrialType = TrialType::TRIALTYPE_NONE;
 	mDebugTrialLocked = false;
 	mMuteSoundsForCutscene = false;
+	mMusicVolume = 0.85;
+	mSfxVolume = 0.5525;
 	mAutoStartLoadingThread = false;
 	mDebugKeysEnabled = false;
 	isFastMode = false;
 	mProdName = "PlantsVsZombies";
-	mVersion = "v2.1";
+	mVersion = "v2.0";
 	mReconVersion = "PvZ: QoTL " + mVersion;
 	std::string aTitleName = "Plants vs. Zombies: QoTL";
 	aTitleName += " " + mVersion;
@@ -450,7 +452,6 @@ void LawnApp::PreNewGame(GameMode theGameMode, bool theLookForSavedGame)
 void LawnApp::StartQuickPlay()
 {
 	mPlayedQuickplay = true;
-	mGameMode = GameMode::GAMEMODE_ADVENTURE;
 	NewGame();
 }
 
@@ -458,7 +459,7 @@ void LawnApp::MakeNewBoard()
 {
 	KillBoard();
 	mBoard = new Board(this);
-	mBoard->Resize(0, 0, mWidth, mHeight);
+	mBoard->Resize(BOARD_ADDITIONAL_WIDTH, BOARD_OFFSET_Y, mWidth, mHeight);
 	mWidgetManager->AddWidget(mBoard);
 	mWidgetManager->BringToBack(mBoard);
 	mWidgetManager->SetFocus(mBoard);
@@ -849,6 +850,7 @@ Dialog* LawnApp::DoDialog(int theDialogId, bool isModal, const SexyString& theDi
 	SexyString aHeader = TodStringTranslate(theDialogHeader);
 	SexyString aLines = TodStringTranslate(theDialogLines);
 	SexyString aFooter = TodStringTranslate(theDialogFooter);
+	SetCursorMode(CURSOR_MODE_NORMAL);
 	Dialog* aDialog = SexyAppBase::DoDialog(theDialogId, isModal, aHeader, aLines, aFooter, theButtonMode);
 	if (mWidgetManager->mFocusWidget == nullptr)
 	{
@@ -1380,7 +1382,7 @@ void LawnApp::Init()
 	mAchievements->InitAchievement();
 	if (HAS_CUSTOM_CURSOR)
 	{
-		mCursor = new CursorWidget(this);
+		mCursor = new CursorWidget();
 		mWidgetManager->AddWidget(mCursor);
 		mWidgetManager->BringToFront(mCursor);
 	}
@@ -3201,7 +3203,7 @@ void LawnApp::UpdateCrazyDave()
 		}
 	}
 
-	if (mCrazyDaveState == CrazyDaveState::CRAZY_DAVE_IDLING || mCrazyDaveState == CrazyDaveState::CRAZY_DAVE_TALKING ||
+	if (mCrazyDaveState == CrazyDaveState::CRAZY_DAVE_IDLING || mCrazyDaveState == CrazyDaveState::CRAZY_DAVE_TALKING || 
 		mCrazyDaveState == CrazyDaveState::CRAZY_DAVE_HANDING_TALKING || mCrazyDaveState == CrazyDaveState::CRAZY_DAVE_HANDING_IDLING)
 	{
 		mCrazyDaveBlinkCounter--;
@@ -3281,18 +3283,7 @@ void LawnApp::DrawCrazyDave(Graphics* g)
 		}
 	}
 
-	Graphics* aDaveGraphic = g;
-	if (mGameMode == GameMode::GAMEMODE_UPSELL)
-	{
-		aDaveGraphic->ClearClipRect();
-		aDaveGraphic->mTransX += BOARD_ADDITIONAL_WIDTH;
-		aDaveGraphic->mTransY += BOARD_OFFSET_Y;
-		aCrazyDaveReanim->Draw(aDaveGraphic);
-		aDaveGraphic->mTransX -= BOARD_ADDITIONAL_WIDTH;
-		aDaveGraphic->mTransY -= BOARD_OFFSET_Y;
-	}
-	else
-		aCrazyDaveReanim->Draw(aDaveGraphic);
+	aCrazyDaveReanim->Draw(g);
 }
 
 int LawnApp::GetNumPreloadingTasks()
@@ -3721,6 +3712,14 @@ void LawnApp::ToggleDebugMode()
 bool LawnApp::Is3dAccel()
 {
 	return mIs3dAccel;
+}
+
+void LawnApp::SetCursorMode(CursorMode theCursorMode)
+{
+	if (HAS_CUSTOM_CURSOR && mCursor)
+	{
+		mCursor->mCursorMode = theCursorMode;
+	}
 }
 
 /* #################################################################################################### */

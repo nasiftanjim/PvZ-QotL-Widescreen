@@ -197,58 +197,270 @@ void SeedPacketDrawSeed(Graphics* g, float x, float y, SeedType theSeedType, See
 		aImage = FilterEffectGetImage(aImage, aFilterEffect);
 	}
 
-	if (aSeedType == SeedType::SEED_POTATOMINE && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 0, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_CHOMPER && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 1, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_HYPNOSHROOM && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 2, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_TALLNUT && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 3, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_BLOVER && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 4, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_PUMPKINSHELL && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 5, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_TWINSUNFLOWER && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 6, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_COBCANNON && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 7, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_CABBAGEPULT && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 8, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_KERNELPULT && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 9, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_MELONPULT && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 10, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_WINTERMELON && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 11, 0, g->mScaleX, g->mScaleY);
-	}
-	else if (aSeedType == SeedType::SEED_SPIKEROCK && g->mScaleX <= 1.0f)
-	{
-		TodDrawImageCelScaledF(g, aImage, x, y, 12, 0, g->mScaleX, g->mScaleY);
-	}
+if (aSeedType == SeedType::SEED_PEASHOOTER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 0, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SUNFLOWER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 1, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_CHERRYBOMB)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 2, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_WALLNUT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 3, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_POTATOMINE)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 4, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SNOWPEA)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 5, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_CHOMPER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 6, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_REPEATER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 7, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_PUFFSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 8, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SUNSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 9, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_FUMESHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 10, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_GRAVEBUSTER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 11, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_HYPNOSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 12, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SCAREDYSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 13, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ICESHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 14, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_DOOMSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 15, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_LILYPAD)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 16, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SQUASH)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 17, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_THREEPEATER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 18, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_TANGLEKELP)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 19, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_JALAPENO)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 20, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SPIKEWEED)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 21, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_TORCHWOOD)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 22, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_TALLNUT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 23, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SEASHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 24, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_PLANTERN)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 25, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_CACTUS)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 26, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_BLOVER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 27, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SPLITPEA)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 28, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_STARFRUIT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 29, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_PUMPKINSHELL)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 30, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_MAGNETSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 31, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_CABBAGEPULT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 32, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_FLOWERPOT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 33, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_KERNELPULT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 34, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_INSTANT_COFFEE)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 35, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_GARLIC)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 36, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_UMBRELLA)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 37, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_MARIGOLD)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 38, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_MELONPULT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 39, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_GATLINGPEA)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 40, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_TWINSUNFLOWER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 41, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_GLOOMSHROOM)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 42, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_CATTAIL)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 43, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_WINTERMELON)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 44, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_GOLD_MAGNET)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 45, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SPIKEROCK)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 46, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_COBCANNON)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 47, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_EXPLODE_O_NUT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 49, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_GIANT_WALLNUT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 50, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_SPROUT)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 51, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_LEFTPEATER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 52, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_NORMAL)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 60, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_TRAFFIC_CONE)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 61, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_POLEVAULTER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 62, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_PAIL)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 63, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_LADDER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 64, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_DIGGER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 65, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_BUNGEE)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 66, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_FOOTBALL)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 67, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_BALLOON)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 68, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_SCREEN_DOOR)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 69, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBONI)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 70, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_POGO)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 71, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_DANCER)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 72, 0, g->mScaleX, g->mScaleY);
+}
+else if (aSeedType == SeedType::SEED_ZOMBIE_GARGANTUAR)
+{
+	TodDrawImageCelScaledF(g, aImage, x, y, 73, 0, g->mScaleX, g->mScaleY);
+}
 	else
 	{
 		Graphics aSeedG(*g);
@@ -564,8 +776,15 @@ void DrawSeedPacket(Graphics* g, float x, float y, SeedType theSeedType, SeedTyp
 		}
 		else
 		{
+			int aBoardXOffset = BOARD_ADDITIONAL_WIDTH;
+			int aBoardYOffset = BOARD_OFFSET_Y;
+			if (gLawnApp->mGameScene == GameScenes::SCENE_AWARD)
+			{
+				aBoardXOffset = 0;
+				aBoardYOffset = 0;
+			}
 			SexyMatrix3 aMatrix;
-			TodScaleTransformMatrix(aMatrix, aTextOffsetX * g->mScaleX + x, aTextOffsetY * g->mScaleY + y, g->mScaleX, g->mScaleY);
+			TodScaleTransformMatrix(aMatrix, aTextOffsetX * g->mScaleX + x + aBoardXOffset, aTextOffsetY * g->mScaleY + y + aBoardYOffset, g->mScaleX, g->mScaleY);
 			if (g->mScaleX > 1.8f)
 			{
 				g->SetLinearBlend(false);

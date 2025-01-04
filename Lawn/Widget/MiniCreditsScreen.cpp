@@ -55,8 +55,8 @@ void MiniCreditsScreen::Draw(Graphics* g)
 
 	g->mTransY += BOARD_OFFSET_Y;
 	g->mTransX += BOARD_ADDITIONAL_WIDTH;
-	TodDrawString(g, "'insert your mod name' Team \n", 400, 120, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
-	TodDrawString(g, "Insert Name\n", 400, 140, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
+	TodDrawString(g, "'PvZ HD' Team \n", 400, 120, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
+	TodDrawString(g, "Nasif Tanjim\n", 400, 140, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
 	TodDrawString(g, "Insert Name\n", 400, 160, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
 	TodDrawString(g, "Insert Name\n", 400, 180, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
 	TodDrawString(g, "Insert Name\n", 400, 200, Sexy::FONT_HOUSEOFTERROR16, TextColor, DS_ALIGN_CENTER);
